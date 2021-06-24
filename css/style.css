@@ -1,0 +1,72 @@
+html,
+body {
+    height: 100%;
+}
+
+.column-filter {
+    width: 280px !important;
+}
+
+.logo {
+    height: 80px;
+}
+
+.filtro {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.filtro>span {
+    letter-spacing: 1px;
+}
+
+.multi-range2 {
+    margin-top: -20px !important;
+}
+
+.regua {
+    height: 300px;
+    background: rgb(54, 179, 171);
+    background: -moz-linear-gradient(163deg, rgba(54, 179, 171, 1) 0%, rgba(36, 107, 179, 1) 100%);
+    background: -webkit-linear-gradient(163deg, rgba(54, 179, 171, 1) 0%, rgba(36, 107, 179, 1) 100%);
+    background: linear-gradient(163deg, rgba(54, 179, 171, 1) 0%, rgba(36, 107, 179, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#36b3ab", endColorstr="#246bb3", GradientType=1);
+}
+
+.tabela {
+    top: -30px;
+}
+
+.fixed-table-container {
+    -webkit-box-shadow: 3px -7px 20px 3px rgba(, 0, 0, 0.1);
+    box-shadow: 3px -7px 20px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--bs-secondary);
+    border-radius: 50px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-dark);
+}
