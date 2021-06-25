@@ -1,35 +1,19 @@
+var $table = $('#table')
+
+
+// constrói tabela
 $.getJSON("data/data1.json", function(json) {
     data = json
 });
-var $table = $('#table')
+
+
 $(function() {
 
     $table.bootstrapTable({ data: data })
     ajusta()
 })
 
-var tds = document.getElementsByTagName('TD')
-
-for (var i = 0; i < tds.length; i++) {
-    tds[i].addEventListener('mouseover', function(e) {
-        console.log(e);
-    })
-};
-
-var $table = $('#table')
-var $button = $('#button')
-
-
-
-$(function() {
-    $button.click(function() {
-        $table.bootstrapTable('filterBy', {
-            id: [1, 2, 3]
-        })
-    })
-})
-
-
+// configurações da régua
 var option;
 
 option = {
@@ -67,6 +51,8 @@ $(window).on('resize', function() {
     }
 });
 
+
+// Gerencia a lista de questões gerecionadas
 var selecionadas = []
 
 $('#table').on('check-all.bs.table', function(e, row) {
@@ -75,7 +61,7 @@ $('#table').on('check-all.bs.table', function(e, row) {
 })
 
 $('#table').on('check.bs.table', function(e, row) {
-    if (selecionadas.includes(row.id)) {} else { selecionadas.push(row.id) }
+    if (!selecionadas.includes(row.id)) { selecionadas.push(row.id) }
     marcanaregua()
     listaselecionadas()
 })
@@ -93,10 +79,17 @@ $('#table').on('uncheck-all.bs.table', function(e, row) {
 function listaselecionadas() {
     lista = ""
     for (i = 0; i < selecionadas.length; i++) {
-        lista = lista + '<div class="col p-1 mx-3">' + selecionadas[i] + '</div>'
+        lista = lista + '<div class="outdot col-2 p-1 my-1 mx-3 border bg-white shadow shadow-sm text-center rounded" onmouseover="midq(this)" onmouseout="eid()" onclick="aid(this)"><div class="dot"></div>' + selecionadas[i] + '</div>'
     }
 
     document.getElementById('selecionadas').innerHTML = lista
+    if (selecionadas.length == 1) {
+        document.getElementById('status').innerHTML = `Apenas <red>uma</red> questão foi selecionada.`
+    } else if (selecionadas.length == 2) {
+        document.getElementById('status').innerHTML = `Foram selecionadas <red>duas</red> questões.`
+    } else {
+        document.getElementById('status').innerHTML = `Foram selecionadas <red>${selecionadas.length}</red> questões.`
+    }
 }
 
 
@@ -118,10 +111,6 @@ function marcanaregua() {
 
         if (!bool) {
             dados.push([x.B, 0, x.id])
-
-
-            console.log(selecionadas);
-
             myChart.setOption(option);
         }
 
@@ -139,22 +128,20 @@ function desmarcanaregua(row) {
     option.series[0].data = dados
     myChart.setOption(option);
     selecionadas.splice(selecionadas.indexOf(row.id), 1)
-    console.log(selecionadas);
 }
 
 
-// based on prepared DOM, initialize echarts instance
-
+//Filtros
 
 
 function ajusta() {
     cheks = document.getElementsByTagName('TR')
     for (i = 1; i < cheks.length; i++) {
         id = cheks[i].getElementsByTagName('TD')[1].innerText
-        cheks[i].getElementsByTagName('td')[1].outerHTML = `<td onmouseover="mid(this)" onmouseout="eid()" onclick="aid(this)"><a href="${id}" target="blank">${id}</a></td>`
+        cheks[i].getElementsByTagName('td')[1].outerHTML = `<td onmouseover="midq(this)" onmouseout="eid()" onclick="aid(this)"><a href="${id}" target="blank">${id}</a></td>`
 
         ac = cheks[i].getElementsByTagName('TD')[2].innerText
-        cheks[i].getElementsByTagName('td')[2].outerHTML = `<td onmouseover="mid(this)" onmouseout="eid()" onclick="aac(this)"><a href="${ac}" target="blank">${ac}</a></td>`
+        cheks[i].getElementsByTagName('td')[2].outerHTML = `<td onmouseover="midr(this)" onmouseout="eid()" onclick="aac(this)"><a href="${ac}" target="blank">${ac}</a></td>`
 
         bp = cheks[i].getElementsByTagName('TD')[14].innerText
         bp = bp.split(' ')
@@ -164,23 +151,34 @@ function ajusta() {
     }
 }
 
-function mid(x) {
+function midq(x) {
+    id = x.innerText
+    var data_filter = data.filter(element => element.id == id)
+    document.getElementById('imagemid').classList.remove('oculto')
+    document.getElementById('idtri').innerText = id
+    document.getElementById('garea').innerText = data_filter[0].area
+    document.getElementById('bvalue').innerText = `B = ${data_filter[0].B}`
+    document.getElementById("imgmodal").src = data_filter[0].img1;
+}
 
-    document.getElementById('imagemid').classList.add('mostra')
-    document.getElementById('imagemid').innerText = x.innerText
+function midr(x) {
+
+    id = x.parentElement.getElementsByTagName('td')[1].innerText
+
+    var data_filter = data.filter(element => element.id == id)
+    document.getElementById('imagemid').classList.remove('oculto')
+    document.getElementById('idtri').innerText = id
+    document.getElementById('garea').innerText = data_filter[0].area
+    document.getElementById('bvalue').innerText = `B = ${data_filter[0].B}`
+    document.getElementById("imgmodal").src = data_filter[0].img2;
+
 }
 
 function eid() {
-    document.getElementById('imagemid').classList.remove('mostra')
+    document.getElementById('imagemid').classList.add('oculto')
 }
 
-function aid(x) {
 
-}
-
-function pesquisa(x) {
-    document.getElementById("table").setAttribute("data-search-text", x);
-}
 
 function limpafiltro() {
     $table.bootstrapTable('resetSearch')

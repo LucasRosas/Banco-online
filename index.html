@@ -16,11 +16,37 @@
 </head>
 
 <body>
+    <header class="py-3 border-bottom">
+        <div class="container-fluid d-grid gap-3">
+            <div class="px-3">
+                <div class="d-flex justify-content-between">
+                    <div class="bernoulli">
+                        <img class="ms-4" src="https://bplay.bernoulli.com.br/dist/img/logo-bse.jpg" alt="Logo Bernoulli" style="height: 40px;">
+                    </div>
+                    <div>
+                        <div class="dropdown">
+                            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://avatars.githubusercontent.com/u/8129237?s=400&u=9d1001d157b7894ab7b60c40f8f84bbfb76ce783&v=4" alt="mdo" width="32" height="32" class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
 
     <div class="container-fluid h-100">
-        <div class="row h-100 ">
+        <div class="row h-100">
             <div class="bg-light px-4 h-100 d-flex flex-column align-items-stretch flex-shrink-0 column-filter shadow">
-                <div class="logo p-4" onclick="reload()">
+                <div class="logo p-4">
                     <a href="#"><img src="img/logo.png" alt="" srcset="" width="100%"></a>
                 </div>
                 <div class="border"></div>
@@ -59,40 +85,39 @@
                                 <label class="btn btn-outline-primary" for="btn-check-mt">MT</label>
 
                             </div>
-                            <div class="border"></div>
-                            <div class="form-check form-switch py-3">
+                            <div class="border my-3"></div>
+                            <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                                 <label class="form-check-label" for="flexCheckChecked">
                               Permitir questões ENEM
                             </label>
                             </div>
-                            <div class="border"></div>
+                            <div class="border my-3"></div>
                             <span>Parâmetros dos itens</span>
                             <div class=" p-2 my-2 d-flex justify-content-between">
-                                <div class="align-middle  me-3 fw-bold">A</div>
-                                <div class=""><input type="range" class="form-range" id="customRange1">
-                                    <div class="row d-flex justify-content-between ">
-                                        <div class="col-5 "><input class="form-control form-control-sm" type="number"></div>
-                                        <div class="col-5"><input class="form-control form-control-sm" type="number"></div>
-                                    </div>
+                                <div class="align-middle  me-2 fw-bold">A:</div>
+
+                                <div class="d-flex">
+                                    <div class="col-5"><input class="form-control form-control-sm" type="number"></div>
+                                    <span class="px-2">até</span>
+                                    <div class="col-5"><input class="form-control form-control-sm" type="number"></div>
                                 </div>
+
                             </div>
                             <div class=" p-2 my-4 d-flex justify-content-between">
-                                <div class="align-middle  me-3 fw-bold">B</div>
-                                <div class=""><input type="range" class="form-range" id="customRange2">
-                                    <div class="row d-flex justify-content-between ">
-                                        <div class="col-5 "><input class="form-control form-control-sm" type="number"></div>
-                                        <div class="col-5"><input class="form-control form-control-sm" type="number"></div>
-                                    </div>
+                                <div class="align-middle  me-2 fw-bold">B:</div>
+                                <div class="d-flex">
+                                    <div class="col-5"><input class="form-control form-control-sm" type="number"></div>
+                                    <span class="px-2">até</span>
+                                    <div class="col-5"><input class="form-control form-control-sm" type="number"></div>
                                 </div>
                             </div>
-                            <div class=" p-2 my-2 d-flex justify-content-between">
-                                <div class="align-middle  me-3 fw-bold">C</div>
-                                <div class=""><input type="range" class="form-range" id="customRange3">
-                                    <div class="row d-flex justify-content-between ">
-                                        <div class="col-5 "><input class="form-control form-control-sm" type="number"></div>
-                                        <div class="col-5"><input class="form-control form-control-sm" type="number"></div>
-                                    </div>
+                            <div class="p-2 my-2 d-flex justify-content-between">
+                                <div class="align-middle  me-2 fw-bold">C:</div>
+                                <div class="d-flex">
+                                    <div class="col-5"><input class="form-control form-control-sm" type="number"></div>
+                                    <span class="px-2">até</span>
+                                    <div class="col-5"><input class="form-control form-control-sm" type="number"></div>
                                 </div>
                             </div>
                             <div class="border"></div>
@@ -123,11 +148,15 @@
 
                     <!--Fim do espaço para o Gráfico-->
 
-                    <div class="position-absolute bottom-0 end-0 px-5" style="padding-bottom: 60px;">
-                        <input class="form-control search-input" placeholder="Pesquisar" type="text" id="customSearch" autocomplete="off">
-                    </div>
+
                     <div class="position-absolute bottom-0 start-0" style="padding-bottom: 60px;">
                         <button type="button" class="btn btn-success ms-5" id="baixar" onclick="baixar()"><i class="bi bi-file-earmark-arrow-down-fill"></i> Gerar Excel</button>
+                        <span class="px-4 text-white fw-bold" id="status"></span>
+                    </div>
+
+
+                    <div class="position-absolute bottom-0 end-0 px-5" style="padding-bottom: 60px;">
+                        <input class="form-control search-input" placeholder="Pesquisar" type="text" id="customSearch" autocomplete="off">
                     </div>
                 </div>
                 <div class="tabela position-relative mx-5">
@@ -162,24 +191,24 @@
 
     </div>
 
-    <div id="imagemid" style="display:none;" class="bg-light shadow rounded p-4 border border-info"></div>
+    <div id="imagemid" class="oculto bg-light shadow rounded p-4 border border-info">
+        <span class="fw-bold p-2 border rounded" id="idtri">SE01_2017_LC_42</span> <span class="fw-bold p-2 border rounded" id="garea">LP</span> <span class="fw-bold p-2 border rounded" id="bvalue">B = 1150</span><br>
+        <img class="mt-4" id='imgmodal' src="" alt="" srcset="">
+    </div>
 
 
-
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/FileSaver.min.js"></script>
     <script type="text/javascript" src="js/xlsx.core.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4 " crossorigin="anonymous "></script>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
     <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
     <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
     <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/export/bootstrap-table-export.min.js"></script>
-
     <script src="js/echarts.min.js"></script>
 
     <script>
