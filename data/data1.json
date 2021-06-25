@@ -1,7 +1,7 @@
 [{
         "id": "SE01_2017_LC_42",
         "area": "LC",
-        "disciplina": "LC",
+        "disciplina": "Língua Portuguesa",
         "gabarito": "A",
         "A": "0,579",
         "B": 995,
@@ -17,7 +17,7 @@
     {
         "id": "SE01_2017_MT_28",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "B",
         "A": "0,579",
         "B": 765,
@@ -33,7 +33,7 @@
     {
         "id": "SE01_2017_MT_78",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "C",
         "A": "0,102",
         "B": 567,
@@ -49,7 +49,7 @@
     {
         "id": "SE01_2017_CN_20",
         "area": "CN",
-        "disciplina": "F¡sica",
+        "disciplina": "Física",
         "gabarito": "D",
         "A": "0,077",
         "B": 614,
@@ -65,7 +65,7 @@
     {
         "id": "SE01_2017_CH_86",
         "area": "CH",
-        "disciplina": "Hist¢ria",
+        "disciplina": "História",
         "gabarito": "E",
         "A": "0,82",
         "B": 904,
@@ -81,7 +81,7 @@
     {
         "id": "SE01_2017_IN_13",
         "area": "LC",
-        "disciplina": "IN",
+        "disciplina": "Inglês",
         "gabarito": "A",
         "A": "0,257",
         "B": 887,
@@ -97,7 +97,7 @@
     {
         "id": "SE01_2016_MT_34",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "B",
         "A": "0,597",
         "B": 747,
@@ -113,7 +113,7 @@
     {
         "id": "SE01_2016_CN_32",
         "area": "CN",
-        "disciplina": "Qu¡mica",
+        "disciplina": "Química",
         "gabarito": "C",
         "A": "0,144",
         "B": 256,
@@ -145,7 +145,7 @@
     {
         "id": "SE01_2016_ES_62",
         "area": "LC",
-        "disciplina": "ES",
+        "disciplina": "Espanhol",
         "gabarito": "E",
         "A": "0,96",
         "B": 251,
@@ -161,7 +161,7 @@
     {
         "id": "SE01_2016_MT_35",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "A",
         "A": "0,007",
         "B": 413,
@@ -177,7 +177,7 @@
     {
         "id": "SE01_2016_CN_38",
         "area": "CN",
-        "disciplina": "F¡sica",
+        "disciplina": "Física",
         "gabarito": "B",
         "A": "0,534",
         "B": 199,
@@ -209,7 +209,7 @@
     {
         "id": "SE01_2018_LC_62",
         "area": "LC",
-        "disciplina": "LC",
+        "disciplina": "Língua Portuguesa",
         "gabarito": "D",
         "A": "0,566",
         "B": 987,
@@ -225,7 +225,7 @@
     {
         "id": "SE01_2018_MT_87",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "E",
         "A": "0,249",
         "B": 943,
@@ -241,7 +241,7 @@
     {
         "id": "SE01_2018_CN_61",
         "area": "CN",
-        "disciplina": "Qu¡mica",
+        "disciplina": "Química",
         "gabarito": "C",
         "A": "0,926",
         "B": 145,
@@ -257,7 +257,7 @@
     {
         "id": "SE01_2018_CH_40",
         "area": "CH",
-        "disciplina": "Hist¢ria",
+        "disciplina": "História",
         "gabarito": "D",
         "A": "0,884",
         "B": 288,
@@ -273,7 +273,7 @@
     {
         "id": "SE01_2018_IN_40",
         "area": "LC",
-        "disciplina": "IN",
+        "disciplina": "Inglês",
         "gabarito": "E",
         "A": "0,237",
         "B": 564,
@@ -289,7 +289,7 @@
     {
         "id": "SE01_2018_MT_11",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "A",
         "A": "0,605",
         "B": 102,
@@ -305,7 +305,7 @@
     {
         "id": "SE01_2019_CN_57",
         "area": "CN",
-        "disciplina": "Qu¡mica",
+        "disciplina": "Química",
         "gabarito": "B",
         "A": "0,95",
         "B": 941,
@@ -337,7 +337,7 @@
     {
         "id": "SE01_2019_ES_99",
         "area": "LC",
-        "disciplina": "ES",
+        "disciplina": "Espanhol",
         "gabarito": "D",
         "A": "0,01",
         "B": 329,
@@ -353,7 +353,7 @@
     {
         "id": "SE01_2019_MT_34",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "E",
         "A": "0,234",
         "B": 880,
@@ -369,7 +369,7 @@
     {
         "id": "SE01_2019_CN_28",
         "area": "CN",
-        "disciplina": "F¡sica",
+        "disciplina": "Física",
         "gabarito": "A",
         "A": "0,184",
         "B": 103,
@@ -401,7 +401,7 @@
     {
         "id": "SE01_2020_LC_56",
         "area": "LC",
-        "disciplina": "LC",
+        "disciplina": "Língua Portuguesa",
         "gabarito": "B",
         "A": "0,525",
         "B": 709,
@@ -417,7 +417,7 @@
     {
         "id": "SE01_2020_MT_49",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "C",
         "A": "0,964",
         "B": 749,
@@ -465,7 +465,7 @@
     {
         "id": "SE01_2020_IN_97",
         "area": "LC",
-        "disciplina": "IN",
+        "disciplina": "Inglês",
         "gabarito": "A",
         "A": "0,204",
         "B": 132,
@@ -481,7 +481,7 @@
     {
         "id": "SE01_2020_MT_20",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "B",
         "A": "0,268",
         "B": 307,
@@ -513,7 +513,7 @@
     {
         "id": "SE01_2021_CH_49",
         "area": "CH",
-        "disciplina": "Hist¢ria",
+        "disciplina": "História",
         "gabarito": "D",
         "A": "0,152",
         "B": 759,
@@ -529,7 +529,7 @@
     {
         "id": "SE01_2021_ES_91",
         "area": "LC",
-        "disciplina": "ES",
+        "disciplina": "Espanhol",
         "gabarito": "E",
         "A": "0,436",
         "B": 570,
@@ -545,7 +545,7 @@
     {
         "id": "SE01_2021_MT_17",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "C",
         "A": "0,853",
         "B": 263,
@@ -561,7 +561,7 @@
     {
         "id": "SE01_2015_CN_58",
         "area": "CN",
-        "disciplina": "F¡sica",
+        "disciplina": "Física",
         "gabarito": "D",
         "A": "0,365",
         "B": 898,
@@ -577,7 +577,7 @@
     {
         "id": "SE01_2017_IN_44",
         "area": "LC",
-        "disciplina": "IN",
+        "disciplina": "Inglês",
         "gabarito": "E",
         "A": "0,863",
         "B": 723,
@@ -593,7 +593,7 @@
     {
         "id": "SE01_2017_MT_30",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "A",
         "A": "0,427",
         "B": 567,
@@ -609,7 +609,7 @@
     {
         "id": "SE01_2017_MT_80",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "B",
         "A": "0,201",
         "B": 561,
@@ -625,7 +625,7 @@
     {
         "id": "SE01_2017_CN_22",
         "area": "CN",
-        "disciplina": "Qu¡mica",
+        "disciplina": "Química",
         "gabarito": "C",
         "A": "0,536",
         "B": 671,
@@ -652,12 +652,12 @@
         "selecionada": "",
         "aplicacoes": "",
         "quantidade": "",
-        "BPlay": "DWMH"
+        "BPlay": "DWMH DDDE"
     },
     {
         "id": "SE01_2017_LC_15",
         "area": "LC",
-        "disciplina": "LC",
+        "disciplina": "Língua Portuguesa",
         "gabarito": "E",
         "A": "0,662",
         "B": 578,
@@ -673,7 +673,7 @@
     {
         "id": "SE01_2016_MT_36",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "A",
         "A": "0,906",
         "B": 670,
@@ -721,7 +721,7 @@
     {
         "id": "SE01_2016_ES_64",
         "area": "LC",
-        "disciplina": "ES",
+        "disciplina": "Espanhol",
         "gabarito": "C",
         "A": "0,467",
         "B": 504,
@@ -737,7 +737,7 @@
     {
         "id": "SE01_2016_MT_37",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "D",
         "A": "0,266",
         "B": 607,
@@ -753,7 +753,7 @@
     {
         "id": "SE01_2016_CN_40",
         "area": "CN",
-        "disciplina": "F¡sica",
+        "disciplina": "Física",
         "gabarito": "E",
         "A": "0,434",
         "B": 606,
@@ -785,7 +785,7 @@
     {
         "id": "SE01_2018_IN_64",
         "area": "LC",
-        "disciplina": "IN",
+        "disciplina": "Inglês",
         "gabarito": "B",
         "A": "0,364",
         "B": 362,
@@ -801,7 +801,7 @@
     {
         "id": "SE01_2018_MT_89",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "B",
         "A": "0,155",
         "B": 616,
@@ -833,7 +833,7 @@
     {
         "id": "SE01_2018_CH_42",
         "area": "CH",
-        "disciplina": "Hist¢ria",
+        "disciplina": "História",
         "gabarito": "D",
         "A": "0,736",
         "B": 241,
@@ -849,7 +849,7 @@
     {
         "id": "SE01_2018_LC_42",
         "area": "LC",
-        "disciplina": "LC",
+        "disciplina": "Língua Portuguesa",
         "gabarito": "A",
         "A": "0,202",
         "B": 860,
@@ -865,7 +865,7 @@
     {
         "id": "SE01_2018_MT_13",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "B",
         "A": "0,737",
         "B": 720,
@@ -881,7 +881,7 @@
     {
         "id": "SE01_2019_CN_59",
         "area": "CN",
-        "disciplina": "F¡sica",
+        "disciplina": "Física",
         "gabarito": "B",
         "A": "0,563",
         "B": 278,
@@ -913,7 +913,7 @@
     {
         "id": "SE01_2019_LC_101",
         "area": "LC",
-        "disciplina": "LC",
+        "disciplina": "Língua Portuguesa",
         "gabarito": "D",
         "A": "0,064",
         "B": 409,
@@ -929,7 +929,7 @@
     {
         "id": "SE01_2019_MT_36",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "E",
         "A": "0,616",
         "B": 855,
@@ -977,7 +977,7 @@
     {
         "id": "SE01_2020_LC_58",
         "area": "LC",
-        "disciplina": "LC",
+        "disciplina": "Língua Portuguesa",
         "gabarito": "B",
         "A": "0,01",
         "B": 757,
@@ -993,7 +993,7 @@
     {
         "id": "SE01_2020_MT_51",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "B",
         "A": "0,467",
         "B": 611,
@@ -1009,7 +1009,7 @@
     {
         "id": "SE01_2020_CN_18",
         "area": "CN",
-        "disciplina": "Qu¡mica",
+        "disciplina": "Química",
         "gabarito": "C",
         "A": "0,297",
         "B": 291,
@@ -1041,7 +1041,7 @@
     {
         "id": "SE01_2020_LC_99",
         "area": "LC",
-        "disciplina": "LC",
+        "disciplina": "Língua Portuguesa",
         "gabarito": "E",
         "A": "0,881",
         "B": 976,
@@ -1057,7 +1057,7 @@
     {
         "id": "SE01_2020_MT_22",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "A",
         "A": "0,193",
         "B": 276,
@@ -1073,7 +1073,7 @@
     {
         "id": "SE01_2015_CN_45",
         "area": "CN",
-        "disciplina": "F¡sica",
+        "disciplina": "Física",
         "gabarito": "B",
         "A": "0,315",
         "B": 227,
@@ -1089,7 +1089,7 @@
     {
         "id": "SE01_2021_CH_51",
         "area": "CH",
-        "disciplina": "Hist¢ria",
+        "disciplina": "História",
         "gabarito": "D",
         "A": "0,682",
         "B": 199,
@@ -1105,7 +1105,7 @@
     {
         "id": "SE01_2021_ES_93",
         "area": "LC",
-        "disciplina": "ES",
+        "disciplina": "Espanhol",
         "gabarito": "E",
         "A": "0,43",
         "B": 535,
@@ -1121,7 +1121,7 @@
     {
         "id": "SE01_2021_MT_19",
         "area": "MT",
-        "disciplina": "Matem tica",
+        "disciplina": "Matemática",
         "gabarito": "A",
         "A": "0,225",
         "B": 431,
@@ -1137,7 +1137,7 @@
     {
         "id": "SE01_2015_CN_60",
         "area": "CN",
-        "disciplina": "Qu¡mica",
+        "disciplina": "Química",
         "gabarito": "B",
         "A": "0,531",
         "B": 726,

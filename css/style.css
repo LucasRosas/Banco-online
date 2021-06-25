@@ -4,7 +4,7 @@ body {
 }
 
 .column-filter {
-    width: 280px !important;
+    width: 270px !important;
 }
 
 .logo {
@@ -25,7 +25,7 @@ body {
 }
 
 .regua {
-    height: 300px;
+    min-height: 300px;
     background: rgb(54, 179, 171);
     background: -moz-linear-gradient(163deg, rgba(54, 179, 171, 1) 0%, rgba(36, 107, 179, 1) 100%);
     background: -webkit-linear-gradient(163deg, rgba(54, 179, 171, 1) 0%, rgba(36, 107, 179, 1) 100%);
@@ -34,11 +34,16 @@ body {
 }
 
 .tabela {
-    top: -30px;
+    top: -44px;
+    font-size: 13px;
+}
+
+.fixed-table-toolbar {
+    pointer-events: none;
 }
 
 .fixed-table-container {
-    -webkit-box-shadow: 3px -7px 20px 3px rgba(, 0, 0, 0.1);
+    -webkit-box-shadow: 3px -7px 20px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 3px -7px 20px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -69,4 +74,25 @@ body {
 
  ::-webkit-scrollbar-thumb:hover {
     background: var(--bs-dark);
+}
+
+#imagemid {
+    position: fixed;
+    z-index: 50;
+    height: calc(100% - 300px);
+    width: 350px;
+    left: 700px;
+    bottom: 100px;
+}
+
+.mostra {
+    display: block !important;
+}
+
+#listaselecionada {
+    z-index: 5;
+}
+
+#selecionadas {
+    margin-bottom: -7px;
 }
