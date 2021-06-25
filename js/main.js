@@ -55,9 +55,12 @@ $(window).on('resize', function() {
 // Gerencia a lista de questões gerecionadas
 var selecionadas = []
 
-$('#table').on('check-all.bs.table', function(e, row) {
-    marcanaregua(row)
-    selecionadas()
+$('#table').on('check-all.bs.table', function(a, b) {
+    b.forEach(x => {
+        if (!selecionadas.includes(x.id)) { selecionadas.push(x.id) }
+    });
+    marcanaregua()
+    listaselecionadas()
 })
 
 $('#table').on('check.bs.table', function(e, row) {
@@ -71,8 +74,14 @@ $('#table').on('uncheck.bs.table', function(e, row) {
     desmarcanaregua(row)
     listaselecionadas()
 })
-$('#table').on('uncheck-all.bs.table', function(e, row) {
-    desmarcanaregua(row)
+$('#table').on('uncheck-all.bs.table', function(rowsAfter, rowsBefore) {
+    console.log(rowsAfter);
+    selecionadas = []
+    console.log(rowsBefore);
+    rowsBefore.forEach(x => {
+        desmarcanaregua(x)
+    });
+
     listaselecionadas()
 })
 
@@ -136,6 +145,12 @@ function desmarcanaregua(row) {
 
 function ajusta() {
     cheks = document.getElementsByTagName('TR')
+    mina = Number(document.getElementById('mina').value)
+    maxa = Number(document.getElementById('maxa').value)
+    minb = Number(document.getElementById('minb').value)
+    maxb = Number(document.getElementById('maxb').value)
+    minc = Number(document.getElementById('minc').value)
+    maxc = Number(document.getElementById('maxc').value)
     for (i = 1; i < cheks.length; i++) {
         id = cheks[i].getElementsByTagName('TD')[1].innerText
         cheks[i].getElementsByTagName('td')[1].outerHTML = `<td onmouseover="midq(this)" onmouseout="eid()" onclick="aid(this)"><a href="${id}" target="blank">${id}</a></td>`
@@ -143,6 +158,26 @@ function ajusta() {
         ac = cheks[i].getElementsByTagName('TD')[2].innerText
         cheks[i].getElementsByTagName('td')[2].outerHTML = `<td onmouseover="midr(this)" onmouseout="eid()" onclick="aac(this)"><a href="${ac}" target="blank">${ac}</a></td>`
 
+        pa = Number(cheks[i].getElementsByTagName('TD')[5].innerText)
+        if (pa <= maxa && pa >= mina) {
+            cheks[i].getElementsByTagName('td')[5].outerHTML = `<td class='bg-info' >${pa}</td>`
+        } else {
+            cheks[i].getElementsByTagName('td')[5].outerHTML = `<td>${pa}</td>`
+        }
+
+        pb = Number(cheks[i].getElementsByTagName('TD')[6].innerText)
+        if (pb <= maxb && pb >= minb) {
+            cheks[i].getElementsByTagName('td')[6].outerHTML = `<td class='bg-info' >${pb}</td>`
+        } else {
+            cheks[i].getElementsByTagName('td')[6].outerHTML = `<td>${pb}</td>`
+        }
+
+        pc = Number(cheks[i].getElementsByTagName('TD')[7].innerText)
+        if (pc <= maxc && pc >= minc) {
+            cheks[i].getElementsByTagName('td')[7].outerHTML = `<td class='bg-info' >${pc}</td>`
+        } else {
+            cheks[i].getElementsByTagName('td')[7].outerHTML = `<td>${pc}</td>`
+        }
         bp = cheks[i].getElementsByTagName('TD')[14].innerText
         bp = bp.split(' ')
         bp = '<a href="https://youtu.be/7JEYuEstxzg" target="blank">' + bp.join('</a> <a href="https://youtu.be/7JEYuEstxzg" target="blank">') + '</a>'
@@ -182,6 +217,13 @@ function eid() {
 
 function limpafiltro() {
     $table.bootstrapTable('resetSearch')
+    document.getElementById('mina').value = 0
+    document.getElementById('maxa').value = 0
+    document.getElementById('minb').value = 0
+    document.getElementById('maxb').value = 0
+    document.getElementById('minc').value = 0
+    document.getElementById('maxc').value = 0
+    ajusta()
 }
 
 function customSearch(data, text) {
