@@ -178,9 +178,12 @@ function ajusta() {
         } else {
             cheks[i].getElementsByTagName('td')[7].outerHTML = `<td>${pc}</td>`
         }
+
+
         bp = cheks[i].getElementsByTagName('TD')[14].innerText
         bp = bp.split(' ')
-        bp = '<a href="https://youtu.be/7JEYuEstxzg" target="blank">' + bp.join('</a> <a href="https://youtu.be/7JEYuEstxzg" target="blank">') + '</a>'
+        link1 = data.filter(element => element.id == id)[0].link1
+        bp = '<a href="' + link1 + '" target="blank">' + bp.join(`</a> <a href="${link1}" target="blank">`) + '</a>'
 
         cheks[i].getElementsByTagName('td')[14].outerHTML = `<td onclick="aac(this)">${bp}</td>`
     }
