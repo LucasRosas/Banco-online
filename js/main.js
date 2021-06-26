@@ -49,6 +49,14 @@ $(window).on('resize', function() {
     if (myChart != null && myChart != undefined) {
         myChart.resize();
     }
+
+    if (document.getElementById('main').getBoundingClientRect().width < 900) {
+        option.xAxis[0].splitNumber = 10
+        myChart.setOption(option);
+    } else {
+        option.xAxis[0].splitNumber = 20
+        myChart.setOption(option);
+    }
 });
 
 
