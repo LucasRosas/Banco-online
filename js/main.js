@@ -150,10 +150,13 @@ function ajusta() {
     maxc = Number(document.getElementById('maxc').value)
     for (i = 1; i < cheks.length; i++) {
         id = cheks[i].getElementsByTagName('TD')[1].innerText
-        cheks[i].getElementsByTagName('td')[1].outerHTML = `<td onmouseover="midq(this)" onmouseout="eid()" onclick="aid(this)"><a href="${id}" target="blank">${id}</a></td>`
+        img1 = data.filter(element => element.id == id)[0].img1
+        cheks[i].getElementsByTagName('td')[1].outerHTML = `<td onmouseover="midq(this)" onmouseout="eid()" onclick="aid(this)"><a href="${img1}" target="blank">${id}</a></td>`
 
         ac = cheks[i].getElementsByTagName('TD')[2].innerText
-        cheks[i].getElementsByTagName('td')[2].outerHTML = `<td onmouseover="midr(this)" onmouseout="eid()" onclick="aac(this)"><a href="${ac}" target="blank">${ac}</a></td>`
+        img2 = data.filter(element => element.id == id)[0].img2
+
+        cheks[i].getElementsByTagName('td')[2].outerHTML = `<td onmouseover="midr(this)" onmouseout="eid()" onclick="aac(this)"><a href="${img2}" target="blank">${ac}</a></td>`
 
         pa = Number(cheks[i].getElementsByTagName('TD')[5].innerText)
         if (pa <= maxa && pa >= mina) {
