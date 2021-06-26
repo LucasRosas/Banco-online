@@ -85,7 +85,7 @@ $('#table').on('uncheck-all.bs.table', function(rowsAfter, rowsBefore) {
 function listaselecionadas() {
     lista = ""
     for (i = 0; i < selecionadas.length; i++) {
-        lista = lista + '<div class="outdot col-2 p-1 my-1 mx-3 border bg-white shadow shadow-sm text-center rounded" onmouseover="midq(this)" onmouseout="eid()" onclick="aid(this)"><div class="dot"></div>' + selecionadas[i] + '</div>'
+        lista = lista + '<div class="outdot col-2 p-1 my-1 mx-3 border bg-white shadow shadow-sm text-center rounded" onmouseover="midq(this)" onmouseout="eid()"><div class="dot"></div>' + selecionadas[i] + '</div>'
     }
 
     document.getElementById('selecionadas').innerHTML = lista
@@ -151,12 +151,12 @@ function ajusta() {
     for (i = 1; i < cheks.length; i++) {
         id = cheks[i].getElementsByTagName('TD')[1].innerText
         img1 = data.filter(element => element.id == id)[0].img1
-        cheks[i].getElementsByTagName('td')[1].outerHTML = `<td onmouseover="midq(this)" onmouseout="eid()" onclick="aid(this)"><a href="${img1}" target="blank">${id}</a></td>`
+        cheks[i].getElementsByTagName('td')[1].outerHTML = `<td onmouseover="midq(this)" onmouseout="eid()"><a href="${img1}" target="blank">${id}</a></td>`
 
         ac = cheks[i].getElementsByTagName('TD')[2].innerText
         img2 = data.filter(element => element.id == id)[0].img2
 
-        cheks[i].getElementsByTagName('td')[2].outerHTML = `<td onmouseover="midr(this)" onmouseout="eid()" onclick="aac(this)"><a href="${img2}" target="blank">${ac}</a></td>`
+        cheks[i].getElementsByTagName('td')[2].outerHTML = `<td onmouseover="midr(this)" onmouseout="eid()"><a href="${img2}" target="blank">${ac}</a></td>`
 
         pa = Number(cheks[i].getElementsByTagName('TD')[5].innerText)
         if (pa <= maxa && pa >= mina) {
@@ -185,7 +185,7 @@ function ajusta() {
         link1 = data.filter(element => element.id == id)[0].link1
         bp = '<a href="' + link1 + '" target="blank">' + bp.join(`</a> <a href="${link1}" target="blank">`) + '</a>'
 
-        cheks[i].getElementsByTagName('td')[14].outerHTML = `<td onclick="aac(this)">${bp}</td>`
+        cheks[i].getElementsByTagName('td')[14].outerHTML = `<td>${bp}</td>`
     }
 }
 
