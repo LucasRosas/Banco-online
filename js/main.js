@@ -75,12 +75,9 @@ $('#table').on('uncheck.bs.table', function(e, row) {
     listaselecionadas()
 })
 $('#table').on('uncheck-all.bs.table', function(rowsAfter, rowsBefore) {
-    console.log(rowsAfter);
     selecionadas = []
-    console.log(rowsBefore);
-    rowsBefore.forEach(x => {
-        desmarcanaregua(x)
-    });
+    option.series[0].data = []
+    myChart.setOption(option);
 
     listaselecionadas()
 })
